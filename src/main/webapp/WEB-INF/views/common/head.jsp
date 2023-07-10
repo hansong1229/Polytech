@@ -11,7 +11,7 @@
 		content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<meta name="description" content="" />
 	<meta name="author" content="" />
-	<title>PolyTech-admin</title>
+	<title>관리자 페이지 - 폴리테크</title>
 	<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
 	<link href="${contextPath}/resources/css/styles.css" rel="stylesheet" />
 	<link rel="icon" type="image/x-icon" href="${contextPath}/resources/assets/img/favicon.png" />
@@ -21,5 +21,4 @@
 	<script src="${contextPath}/resources/js/scripts.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="${contextPath}/resources/js/datatables/datatables-simple-demo.js"></script>
-
 </head>
