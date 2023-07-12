@@ -21,7 +21,6 @@
 
 
     <div class="container">
-	<jsp:include page="../common/header.jsp"></jsp:include>
 	
 	    <h2>이력서 작성</h2>
         <form>
@@ -76,14 +75,14 @@
                                 <span>이름</span>
                             </td>
                             <td>
-                                <input type="text">
+                                <input type="text" name="user_name">
                             </td>
                             <td>
                                 <span>성별</span>
                             </td>
                             <td>
-                                <label><input type="radio" name="gender" value="male">남성</label>
-                                <label><input type="radio" name="gender" value="female">여성</label>
+                                <label><input type="radio" name="user_gender" value="male">남성</label>
+                                <label><input type="radio" name="user_gender" value="female">여성</label>
                             </td>
 
                         </tr>
@@ -94,6 +93,7 @@
                                 <span>생년월일</span>
                             </td>
                             <td>
+                            	<input type="hidden" name="user_birthday">
                                 <input type="date">
                             </td>
 
@@ -104,6 +104,7 @@
                                 <span>주소</span>
                             </td>
                             <td>
+                            	<input type="hidden" name="user_address">
                                 <input type="text">
                             </td>
                             <td>
@@ -133,7 +134,7 @@
                                 <span>휴대전화</span>
                             </td>
                             <td colspan="5">
-                                <input type="tel">
+                                <input type="tel" name="user_phone">
                                 <span>-</span>
                                 <input type="tel">
                                 <span>-</span>
@@ -146,14 +147,19 @@
                                 <span>이메일</span>
                             </td>
                             <td colspan="3">
+                            	<input type="hidden" name="user_email">
                                 <input type="text">
                                 <span>@</span>
                                 <input type="text">
-                                <input type="text">
+                                <select>
+                                    <option value="">naver.com</option>
+                                    <option value="">gmail.com</option>
+                                    <option value="">직접입력</option>
+                                </select>
                             </td>
                         </tr>
                     </table>
-                    <input type="file">
+                    <input type="file" name="user_picture">
                 </div>
             </div>
 
@@ -173,15 +179,16 @@
                         </tr>
                         <tr>
                             <td>
-                                <select>
-                                    <option value="">전역</option>
-                                    <option value="">미필</option>
-                                    <option value="">면제</option>
+                                <select name="user_military">
+                                    <option value="">-- 선택 --</option>
+                                    <option value="전역">전역</option>
+                                    <option value="미필">미필</option>
+                                    <option value="면제">면제</option>
                                 </select>
                             </td>
-                            <td><input type="text"></td>
-                            <td><input type="date"><span>~</span><input type="date"></td>
-                            <td><input type="text"></td>
+                            <td><input type="text" name="user_class"></td>
+                            <td><input type="date" name="user_stdtsrvc"><span>~</span><input type="date" name="user_eddtsrvc"></td>
+                            <td><input type="text" name="user_unfns_cause"></td>
                         </tr>
                     </table>
                 </div>
@@ -207,19 +214,19 @@
                             <td><span>관리</span></td>
                         </tr>
                         <tr>
-                            <td><input type="text"></td>
+                            <td><input type="text" name="acdm_name"></td>
                             <td>
-                                <input type="date">
+                                <input type="date" name="acdm_stdtsrvc">
                                 <span>~</span>
-                                <input type="date">
+                                <input type="date" name="acdm_eddtsrvc">
                             </td>
-                            <td><input type="text"></td>
+                            <td><input type="text" name="acdm_major"></td>
                             <td>
-                                <input type="text">
+                                <input type="text" name="acdm_grades">
                                 <span>/4.5</span>
                             </td>
                             <td>
-                                <select>
+                                <select name="acdm_state">
                                     <option>졸업</option>
                                     <option>휴학</option>
                                     <option>중퇴</option>
@@ -248,14 +255,14 @@
                         </tr>
                         <tr>
                             <td>
-                                <input type="date">
+                                <input type="date" name="career_dtepmt">
                                 <span>~</span>
-                                <input type="date">
+                                <input type="date" name="career_dtrtmt">
                             </td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
+                            <td><input type="text" name="career_company"></td>
+                            <td><input type="text" name="career_position"></td>
                             <td>
-                                <select>
+                                <select name="career_state">
                                     <option>재직</option>
                                     <option>퇴사</option>
                                     <option>수료</option>
@@ -268,7 +275,7 @@
                         <tr>
                             <td colspan="5">
                                 <span>주요업무</span>
-                                <input type="text">
+                                <input type="text" name="career_mainbsns">
                             </td>
                         </tr>
                     </table>
@@ -290,9 +297,9 @@
                             <td><span>관리</span></td>
                         </tr>
                         <tr>
-                            <td><input type="text"></td>
-                            <td><input type="date"></td>
-                            <td><input type="text"></td>
+                            <td><input type="text" name="lic_name"></td>
+                            <td><input type="date" name="lic_date"></td>
+                            <td><input type="text" name="lic_organization"></td>
                             <td><button>X</button></td>
                         </tr>
                     </table>
@@ -309,26 +316,26 @@
                     <table>
                     <tr>
                         <td><span>국가 보훈 사항</span></td>
-                        <td><label><input type="radio" name="1">비대상</label></td>
-                        <td><label><input type="radio" name="1">대상</label></td>
+                        <td><label><input type="radio" name="user_va">비대상</label></td>
+                        <td><label><input type="radio" name="user_va">대상</label></td>
                     </tr>
                     <tr>
                         <td><span>생활 보호 사항</span></td>
-                        <td><label><input type="radio" name="2">비대상</label></td>
-                        <td><label><input type="radio" name="2">보호 1종</label></td>
-                        <td><label><input type="radio" name="2">보호 2종</label></td>
+                        <td><label><input type="radio" name="user_protection">비대상</label></td>
+                        <td><label><input type="radio" name="user_protection">보호 1종</label></td>
+                        <td><label><input type="radio" name="user_protection">보호 2종</label></td>
                     </tr>
                     <tr>
                         <td><span>컴퓨터 지식</span></td>
-                        <td><label><input type="radio" name="3">상</label></td>
-                        <td><label><input type="radio" name="3">중</label></td>
-                        <td><label><input type="radio" name="3">하</label></td>
+                        <td><label><input type="radio" name="user_comknowledge">상</label></td>
+                        <td><label><input type="radio" name="user_comknowledge">중</label></td>
+                        <td><label><input type="radio" name="user_comknowledge">하</label></td>
                     </tr>
                     <tr>
                         <td><span>외국어 능력</span></td>
-                        <td><label><input type="radio" name="4">불가능</label></td>
-                        <td><label><input type="radio" name="4">일상 회화 가능</label></td>
-                        <td><input type="text" placeholder="가능 언어 입력"></td>
+                        <td><label><input type="radio" name="user_foreignknowledge">불가능</label></td>
+                        <td><label><input type="radio" name="user_foreignknowledge">일상 회화 가능</label></td>
+                        <td><input type="text" name="user_foreignknowledge" placeholder="가능 언어 입력"></td>
                     </tr>
                 </table>
                 </div>
@@ -341,7 +348,7 @@
             <div>
                 <tr>
                     <td><span>구비서류</span></td>
-                    <td><input type="file"></td>
+                    <td><input type="file" name="user_atfp"></td>
                 </tr>
             </div>
 
