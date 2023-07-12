@@ -21,4 +21,3 @@
 	<script src="${contextPath}/resources/js/scripts.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="${contextPath}/resources/js/datatables/datatables-simple-demo.js"></script>
-</head>

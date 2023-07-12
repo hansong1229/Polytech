@@ -57,7 +57,7 @@
 							data-bs-parent="#accordionSidenavPagesMenu">
 							<nav class="sidenav-menu-nested nav accordion"
 								id="accordionSidenavPagesAuth">
-								<a class="nav-link" href="blog-management-posts-list.html">채용 공고 추가</a>
+								<a class="nav-link" href="blog-management-posts-list.html">채용 공고 목록</a>
 								<a class="nav-link" href="blog-management-posts-list.html">신청자 목록</a>
 							</nav>
 						</div>
