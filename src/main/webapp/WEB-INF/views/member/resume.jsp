@@ -23,7 +23,7 @@
     <div class="container">
 	
 	    <h2>이력서 작성</h2>
-        <form>
+        <form method="post" action="createResume.do" enctype="multipart/form-data">
 
             <div>
 
@@ -316,8 +316,8 @@
                     <table>
                     <tr>
                         <td><span>국가 보훈 사항</span></td>
-                        <td><label><input type="radio" name="user_va">비대상</label></td>
-                        <td><label><input type="radio" name="user_va">대상</label></td>
+                        <td><label><input type="radio" name="user_va" value="비대상">비대상</label></td>
+                        <td><label><input type="radio" name="user_va" value="대상">대상</label></td>
                     </tr>
                     <tr>
                         <td><span>생활 보호 사항</span></td>
@@ -333,7 +333,7 @@
                     </tr>
                     <tr>
                         <td><span>외국어 능력</span></td>
-                        <td><label><input type="radio" name="user_foreignknowledge">불가능</label></td>
+                        <td><label><input type="radio" name="user_foreignknowledge" value="불가능">불가능</label></td>
                         <td><label><input type="radio" name="user_foreignknowledge">일상 회화 가능</label></td>
                         <td><input type="text" name="user_foreignknowledge" placeholder="가능 언어 입력"></td>
                     </tr>
