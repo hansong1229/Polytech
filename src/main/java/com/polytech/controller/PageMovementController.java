@@ -12,10 +12,14 @@ public class PageMovementController {
 	
 	
 	@RequestMapping("/resume.do")
-	public String main() {
+	public String resume() {
 		return "member/resume";
 	}
 	
+	@RequestMapping("/testPage")
+	public String testPage() {
+		return "member/testPage";
+	}
 	
 	
 	

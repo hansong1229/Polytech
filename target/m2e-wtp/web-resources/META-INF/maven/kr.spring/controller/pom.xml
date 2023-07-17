@@ -170,6 +170,15 @@
 		    <version>09May2002</version>
 		</dependency>
 		
+		
+		<!-- 파일 업로드 -->
+		<dependency>
+		    <groupId>commons-fileupload</groupId>
+		    <artifactId>commons-fileupload</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		
 				<!-- mariaDB connector -->
 		<!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
 		<dependency>

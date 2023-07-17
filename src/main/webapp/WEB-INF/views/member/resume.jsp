@@ -93,8 +93,7 @@
                                 <span>생년월일</span>
                             </td>
                             <td>
-                            	<input type="hidden" name="user_birthday">
-                                <input type="date">
+                                <input type="date" name="user_birthday">
                             </td>
 
                         </tr>
@@ -149,7 +148,6 @@
                             <td colspan="3">
                             	<input type="hidden" name="user_email">
                                 <input type="text">
-                                <span>@</span>
                                 <input type="text">
                                 <select>
                                     <option value="">naver.com</option>
