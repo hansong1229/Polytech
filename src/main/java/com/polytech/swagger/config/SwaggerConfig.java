@@ -16,9 +16,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 	
 	private ApiInfo metadata() {
-		return new ApiInfoBuilder().title("project title") // 제목
-								   .description("project description") // 설명
-								   .version("1.0") // 버전
+		return new ApiInfoBuilder().title("Korea Polytech Project") // 제목
+								   .description("한국 폴리테크 서비스 소개") // 설명
+								   .version("0.1") // 버전
 								   .build();
 	}
 
