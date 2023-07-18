@@ -6,7 +6,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <jsp:include page="common/head.jsp"></jsp:include>
-
 </head>
 
 <body class="nav-fixed">

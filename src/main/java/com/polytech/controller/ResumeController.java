@@ -1,5 +1,8 @@
 package com.polytech.controller;
 
+<<<<<<< HEAD
+import java.util.List;
+=======
 
 import java.io.File;
 import java.io.IOException;
@@ -7,29 +10,85 @@ import java.text.SimpleDateFormat;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+>>>>>>> branch 'master' of https://github.com/hansong1229/polytech.git
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+<<<<<<< HEAD
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+=======
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+>>>>>>> branch 'master' of https://github.com/hansong1229/polytech.git
 
 import com.polytech.entity.Acdm;
 import com.polytech.entity.Career;
+<<<<<<< HEAD
+import com.polytech.entity.Employment;
+import com.polytech.entity.License;
+import com.polytech.entity.Resume;
+import com.polytech.mapper.MemberMapper;
+=======
 import com.polytech.entity.License;
 import com.polytech.entity.User;
+>>>>>>> branch 'master' of https://github.com/hansong1229/polytech.git
 import com.polytech.mapper.ResumeMapper;
 
 
 @Controller
 public class ResumeController {
-
+	private final ResumeMapper resumeMapper;
+	
 	@Autowired
-	private ResumeMapper resumeMapper;
+    public ResumeController(ResumeMapper resumeMapper) {
+        this.resumeMapper = resumeMapper;
+    }
+	
+	@RequestMapping("/acdmList")
+	public String acdmList(Model model) {
+		List<Acdm> acdmList= resumeMapper.getAcdms();
+		model.addAttribute("acdmList",acdmList);
+		return "acdmList";
+	}
+	
+	@RequestMapping("/careerList")
+	public String careerList(Model model) {
+		List<Career> careerList= resumeMapper.getCareers();
+		model.addAttribute("careerList", careerList);
+		return "careerList";
+	}
+	
+	@RequestMapping("/employmentList")
+	public String employmentList(Model model) {
+		List<Employment> employmentList= resumeMapper.getEmployments();
+		model.addAttribute("employmentList", employmentList);
+		return "employmentList";
+	}
 	
 
 	
+<<<<<<< HEAD
+	@RequestMapping("/licenseList")
+	public String licenseList(Model model) {
+		List<License> licenseList= resumeMapper.getLicenses();
+		model.addAttribute("licenseList", licenseList);
+		return "licenseList";
+	}
+	
+	@RequestMapping("/resume")
+	public String resumeList(Model model) {
+		List<Resume> resumeList=resumeMapper.getResume();
+		for(int i = 0 ; i<resumeList.size(); i++) {
+			System.out.println(resumeList.toString());
+		}
+		model.addAttribute("resume", resumeList);
+		return "member/resume";
+	}
+	
+=======
 	  @PostMapping("/createResume.do")
       public String createResume(MultipartFile[] upload, HttpServletRequest request, User u, License l, Career c, Acdm a, HttpSession session) {
 
@@ -68,6 +127,7 @@ public class ResumeController {
           
         return "redirect:/";
     };
+>>>>>>> branch 'master' of https://github.com/hansong1229/polytech.git
 
 	
 }

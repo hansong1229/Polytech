@@ -35,7 +35,7 @@
 		</listener-class>
 	</listener>
 
-	<!-- Processes application requests -->
+	<!-- Processes application requests 모든 요청은 DispatcherServlet으로 갑니다. -->
 	<servlet>
 		<servlet-name>appServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet
