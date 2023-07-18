@@ -27,7 +27,10 @@ import com.polytech.entity.test2;
 import com.polytech.mapper.Test1Mapper;
 import com.polytech.mapper.Test2Mapper;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
+@Api(value="testController", description = "이력서에 다중 테이블 삽입과 파일 업로드 testAPI")
 @Controller
 public class TestController {
 
@@ -40,6 +43,7 @@ public class TestController {
 	@Autowired
 	private Test2Mapper t2mapper;
 	
+	@ApiOperation(value="test table 삽입", notes="testPage의 값을 입력받아 DB에 Insert하는 메서드입니다.")
 	@PostMapping("/testSubmit.do")
 	public String testSubmit(test1 t1, test2 t2, Model model, MultipartFile singleFile, HttpServletRequest request) {
 		System.out.println(t1.getTest_name());
