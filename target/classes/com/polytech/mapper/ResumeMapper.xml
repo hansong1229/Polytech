@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.polytech.mapper.ResumeMapper">
+<<<<<<< HEAD
 	<select id="getAcdms" resultType="com.polytech.entity.Acdm">
 		SELECT * FROM T_acdm;
 	</select>
@@ -26,5 +27,8 @@
 		JOIN T_career ON t_user.user_seq = #{career_user_seq}
 		JOIN T_license ON t_user.user_seq = #{license_user_seq};
 	</select>
+=======
+	
+>>>>>>> branch 'master' of https://github.com/hansong1229/polytech.git
 
 </mapper>

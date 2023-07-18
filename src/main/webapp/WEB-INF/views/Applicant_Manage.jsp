@@ -47,68 +47,67 @@ background-color: red;
 				<!-- Main page content-->
 				<div class="card mb-4">
                             <div class="card-header">
-                            채용 공고 목록
-                            <span style="float: right; margin-right: 5%;">
-                            <button class="blue_btn">추가하기</button>
-
-                            </span>
+                            모집분야 : <span>산소용접공</span> 구인
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>모집 현황</th>
-                                            <th>채용 공고 내용</th>
-                                            <th>모집 분야</th>
-                                            <th>채용 기간</th>
-                                            <th>등록일</th>
+                                            <th>성명</th>
+                                            <th>성별</th>
+                                            <th>생년월일</th>
+                                            <th>연락처</th>
+                                            <th>주소</th>
                                             <th>관리</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                          <tr>
-                                            <th>모집 현황</th>
-                                            <th>채용 공고 내용</th>
-                                            <th>모집 분야</th>
-                                            <th>채용 기간</th>
-                                            <th>등록일</th>
+                                            <th>성명</th>
+                                            <th>성별</th>
+                                            <th>생년월일</th>
+                                            <th>연락처</th>
+                                            <th>주소</th>
                                             <th>관리</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr>
-                                            <td>모집예정</td>
-                                            <td>2B팹 산소용접 용접공 구인 공고</td>
-                                            <td>산소용접공 구인</td>
-                                            <td>2023-07-13 ~ 2023-08-03</td>
-                                            <td>2023/07/10</td>
+                                            <td>김유신</td>
+                                            <td>남성</td>
+                                            <td>1999.09.09</td>
+                                            <td>010-0000-0000</td>
+                                            <td>전남 oo시 oo로 oo-o oooo아파트 oooo호</td>
                                             <td>
-                                                <button class="blue_btn">수정하기</button>
-                                                <button class="red_btn">삭제하기</button>
+                                                <button class="blue_btn">상세정보</button>
+                                                <button class="red_btn">출력하기</button>
                                             </td>
                                         </tr>
+                                        
                                         <tr>
-                                            <td>모집중</td>
-                                            <td>3F팹 산소용접 용접공 구인 공고</td>
-                                            <td>전기용접공 구인</td>
-                                            <td>2023-06-23 ~ 2023-07-23</td>
-                                            <td>2023/06/23</td>
+                                            <td>이난영</td>
+                                            <td>여성</td>
+                                            <td>1997.07.07</td>
+                                            <td>010-1111-2222</td>
+                                            <td>전남 oo시 oo로 oo-o oooo아파트 oooo호</td>
                                             <td>
-                                                <button class="blue_btn">수정하기</button>
-                                                <button class="red_btn">삭제하기</button>
+                                                <button class="blue_btn">상세정보</button>
+                                                <button class="red_btn">출력하기</button>
                                             </td>
                                         </tr>
+                                        
                                         <tr>
-                                            <td>모집종료</td>
-                                            <td>3F팹 소방배관 배관공 구인공고</td>
-                                            <td>배관공 구인</td>
-                                            <td>2023-06-05 ~ 2023-07-03</td>
-                                            <td>2023/05/30</td>
+                                            <td>홍길동</td>
+                                            <td>남성</td>
+                                            <td>2000.01.01</td>
+                                            <td>010-2222-3333</td>
+                                            <td>전남 oo시 oo로 oo-o oooo아파트 oooo호</td>
                                             <td>
-                                                <button class="blue_btn">수정하기</button>
-                                                <button class="red_btn">삭제하기</button>
+                                                <button class="blue_btn">상세정보</button>
+                                                <button class="red_btn">출력하기</button>
                                             </td>
                                         </tr>
+                                        
              
                                     </tbody>
                                 </table>

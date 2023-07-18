@@ -29,12 +29,14 @@
                                                 <label class="small mb-1" for="inputPassword">비밀번호</label>
                                                 <input class="form-control" id="inputPassword" type="password" placeholder="비밀번호를 입력해주세요." />
                                             </div>
-                                            
                                             <!-- Form Group (login box)-->
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="btn btn-primary" href="index.jsp">로그인</a>
                                             </div>
                                         </form>
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        <div class="small"><a href="auth-register-basic.html">회원가입</a></div>
                                     </div>
                                 </div>
                             </div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.polytech.mapper.Test1Mapper">
+	
+	<insert id="insertTest1" parameterType="com.polytech.entity.test1">
+		insert into T_test1 (test_name, test_age, test_picture) values (#{test_name},#{test_age},#{test_picture})
+	</insert>
+
+	<select id="selectTest1" parameterType="com.polytech.entity.test1" resultType="com.polytech.entity.test1">
+		select * from T_test1 where test_name = #{test_name} and test_age=#{test_age}
+	</select>
+	
+</mapper>

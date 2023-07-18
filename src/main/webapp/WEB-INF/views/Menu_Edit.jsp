@@ -24,8 +24,6 @@
 	    border: 0;
 	    border-radius: 5px;
 	    padding: 0 10px;
-	    font-weight: bold;
-	    font-size: 1.09em;
 	    vertical-align: middle;
 	    color:#ffffff;
     	}

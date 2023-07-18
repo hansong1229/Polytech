@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.polytech.mapper.Test2Mapper">
+	
+	<insert id="insertTest2" parameterType= "com.polytech.entity.test2">
+		insert into T_test2 (test_seq,test_state) values (#{test_seq},#{test_state})
+	</insert>
+
+	
+</mapper>
