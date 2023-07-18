@@ -1,109 +1,63 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<!--taglib 사용하는방법!  -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Bootstrap Example</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-  
-  $(document).ready(function(){
-      if(${not empty msgType}){
-         if(${msgType eq "성공 메시지"}){
-            $("#messageType").attr("class", "modal-content panel-success");
-         }
-         if(${msgType eq "로그아웃 메시지"}){
-             $("#messageType").attr("class", "modal-content panel-primary");
-          }
-         $("#myMessage").modal("show");
-      }
-   });
-  
-  
-  </script>
-
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-
-
-
-	<div class="container">
-		<jsp:include page="common/header.jsp"></jsp:include>
-
-		<h3>Spring MVC03</h3>
-
-		<div class="panel panel-default">
-			<div>
-			<!-- 스프링에선 모든 이미지같은 리소스 파일들을 웹앱 안에 리스소에 넣어야 한다 -->
-				<img src="${contextPath}/resources/images/main.jpg" style="width: 100%; height:400px;">
-			</div>
-			<div class="panel-body">
-				  <ul class="nav nav-tabs">
-				  
-				  
-    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-    <li><a data-toggle="tab" href="#menu1">게시판</a></li>
-    <li><a data-toggle="tab" href="#menu2">공지사항</a></li>
-  </ul>
-
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h3>HOME</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                            
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
     </div>
-    <div id="menu1" class="tab-pane fade">
-      <h3>게시판</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h3>공지사항</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="${contextPath}/kakaoMap">카카오 api</a></li>
+            <li><a href="${contextPath}/memberList">MemberList가져오기</a></li>
+            <li><a href="${contextPath}/acdmList">acdm가져오기</a></li>
+            <li><a href="${contextPath}/careerList">career가져오기</a></li>
+            <li><a href="${contextPath}/employmentList">employment가져오기</a></li>
+            <li><a href="${contextPath}/licenseList">license가져오기</a></li>
+          </ul>
+        </li>
+        <li><a href="${contextPath}/resume">join된 모든리스트 가져오기 </a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
     </div>
   </div>
+</nav>
   
-  
-			</div>
-			<div class="panel-footer">스프링게시판-김한송</div>
-		</div>
-	</div>
-
-
-
-
-
-
-
-	<!-- 다이얼로그창(모달) -->
-	<!-- 회원가입 성공시 나오게될 모달창 -->
-	<!-- Modal -->
-	<div class="modal fade" id="myMessage" role="dialog">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div id="messageType" class="modal-content panel-info">
-				<div class="modal-header panel-heading">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">${msgType}</h4>
-				</div>
-				<div class="modal-body">
-					<p id="">${msg}</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="container">
+  <h3>Collapsible Navbar</h3>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+</div>
 
 </body>
 </html>

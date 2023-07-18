@@ -222,7 +222,7 @@
 			<!-- 글쓰기 폼 -->
 			<div class="panel-body" style="display: none;" id="wform">
 				<form id="frm">
-					<input type="hidden" name="memID" value="${mvo.memID}"
+					<input type="hidden" name="memID" value="${mvo.memID}">
 					<table class="table">
 						<tr>
 							<td>제목</td>

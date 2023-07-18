@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.polytech.mapper.ResumeMapper">
+	<select id="getAcdms" resultType="com.polytech.entity.Acdm">
+		SELECT * FROM T_acdm;
+	</select>
 
+	<select id="getCareers" resultType="com.polytech.entity.Career">
+		Select * from T_career;
+	</select>
+
+	<select id="getLicenses"
+		resultType="com.polytech.entity.License">
+		select * from T_license;
+	</select>
+
+	<select id="getEmployments"
+		resultType="com.polytech.entity.Employment">
+		select * from T_employment;
+	</select>
+
+	<select id="getResume" resultType="com.polytech.entity.Resume">
+		SELECT *
+		FROM t_user
+		JOIN T_acdm ON t_user.user_seq = #{acdm_user_seq}
+		JOIN T_career ON t_user.user_seq = #{career_user_seq}
+		JOIN T_license ON t_user.user_seq = #{license_user_seq};
+	</select>
 
 </mapper>
