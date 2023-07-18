@@ -19,6 +19,8 @@ public class test1 {
 
     // 나이 
     private Integer test_age;
-
+    
+    // 사진
+    private String test_picture;
 	
 }
